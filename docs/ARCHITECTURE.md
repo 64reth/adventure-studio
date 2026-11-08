@@ -1,0 +1,2 @@
+# Architecture
+TypeScript workspace: apps/studio uses React and the Next.js App Router API through vinext, deployed as a dedicated Cloudflare Worker. packages/core defines Zod boundaries; packages/storage supplies browser and atomic local-file adapters. Browser records are local to the device and origin. Print coordinates use inches, converted to PDF points at export. Puzzle packages must remain independent of React and artwork services.

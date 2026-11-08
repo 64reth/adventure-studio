@@ -1,0 +1,2 @@
+import {test,expect} from '@playwright/test';
+test('creates an adventure and preserves it on reload',async({page})=>{await page.goto('/');await expect(page.getByRole('button',{name:'Create adventure',exact:true})).toBeEnabled();await page.getByLabel('Adventure title').fill('Browser proof');await page.getByRole('button',{name:'Create adventure',exact:true}).click();await expect(page.getByRole('heading',{name:'Browser proof'})).toBeVisible();await page.reload();await expect(page.getByRole('heading',{name:'Browser proof'})).toBeVisible();});

@@ -1,0 +1,14 @@
+node_modules/
+**/dist/
+**/.cloudflare/
+**/.vinext/
+**/.next/
+**/*.tsbuildinfo
+.env*
+.dev.vars*
+.data/
+test-results/
+playwright-report/
+.DS_Store
+.agents/
+skills-lock.json
