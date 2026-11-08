@@ -13,3 +13,4 @@ playwright-report/
 .agents/
 skills-lock.json
 artifacts/**/*.png
+**/.wrangler/
