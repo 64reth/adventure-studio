@@ -22,15 +22,16 @@ Live staging: https://adventure-studio-staging.garetha81.workers.dev
 
 Release commit: 3f3b16c — `feat: build visual Page Studio and playful UI` — pushed to origin/main.
 
-Deployment: 24c0de1d-c43c-40e4-bfc0-791d316ca4b4.
+Final source commit: 4f00a20 — shared browser/Worker export pipeline — pushed to origin/main.
 
-The original release passed nine live workflows. Final eleven-workflow live verification of the browser fallback adapter is pending. Freshly generated live A4 player/answer PDFs embed all three fonts and pass dimension/text/path bounds checks. Deployed desktop/focus/tablet screenshots are captured below. One Cloudflare resource-limit response occurred while export checks overlapped; an isolated retry and three concurrent retries succeeded. The short heap capture had no useful allocation samples, so no CPU/memory root cause is claimed. Avoid overlapping large exports or use smaller packages if it recurs. The client now retries transient network/5xx export failures once after 1.5 seconds and gives a clear capacity message on repeated failure. Approval/validation errors are never retried. No paid resource-limit increase was made.
+Final deployment: 56b622ed-9775-4ba0-884b-d9c8c89acfbd.
+
+All eleven live workflows pass on the final deployment, including the forced-capacity browser rendering path and validation-gate protection. Freshly generated live A4 player/answer PDFs embed all three fonts and pass dimension/text/path bounds checks. Deployed desktop/focus/tablet screenshots are captured below. Worker resource limits recurred under overlapping export workloads; retry alone was insufficient. The final shared pipeline has a browser adapter that completes the same validated package without depending on Worker rendering capacity. The short heap capture had no useful allocation samples, so no CPU/memory root cause is claimed. Direct API clients remain subject to Worker capacity; the studio automatically uses browser rendering if needed. The client retries transient network/5xx failures once, then renders locally using the identical validation and composition pipeline. Approval/validation errors are never retried. No paid resource-limit increase was made.
 
 ## Screenshots
-- ../screenshots/build-006-dashboard.png
-- ../screenshots/build-006-page-studio.png
-- ../screenshots/build-006-focused-canvas.png
-- ../screenshots/build-006-tablet.png
+![Focused Page Studio](../screenshots/build-006-focused-canvas.png)
+
+[Dashboard](../screenshots/build-006-dashboard.png) · [Full Page Studio](../screenshots/build-006-page-studio.png) · [Tablet](../screenshots/build-006-tablet.png)
 
 ## Review assets
 artifacts/build-006 includes an editable A4 Moonlit Garden composition, player/answer PDFs, 300 DPI preview, original SVGs, project JSON, provenance, manifest, validation report and complete ZIP. Its robot/tree are original placeholders; it is a review copy, not an owner-approved publication.
@@ -39,3 +40,5 @@ artifacts/build-006 includes an editable A4 Moonlit Garden composition, player/a
 Full modular character creation remains Build 007. Detailed world/scene authoring remains Build 008. Functional puzzle paths/clues remain protected inside one block. Grouping/basic alignment are intentionally simpler than a full desktop publishing package. SVG import uses a strict safe subset; raster thresholding is for simple icons. Storage remains browser-local with ordinary quotas; no shared persistence migration, paid AI request or unrelated resource/DNS change occurred. See docs/KNOWN-LIMITATIONS.md for the complete current limits.
 
 The shared export pipeline now accepts either the Node/Worker PDFKit engine or the lazy-loaded browser PDFKit engine. After transient retries, Worker/network capacity failures use local rendering with identical schema, puzzle, layout, provenance and approval validation. A forced-503 browser test verifies the three-font A4 package; a forced-400 test verifies that validation errors cannot invoke fallback. Real browser-generated PDFs also passed dimension, embedded-font and bounds inspection.
+
+Final live print proof: A4 PDFs embed Fredoka Medium, Nunito Medium and Open Sans; all text and paths fit. The live browser-rendered PNG is 2480×3508 pixels at 300 DPI. Source SVG contains neither UI colours nor editor overlays. Evidence: artifacts/build-006/live-verification.json.

@@ -1,15 +1,18 @@
 {
   "url": "https://adventure-studio-staging.garetha81.workers.dev",
-  "commit": "3f3b16c",
-  "deployment": "24c0de1d-c43c-40e4-bfc0-791d316ca4b4",
+  "sourceCommit": "4f00a20",
+  "featureCommit": "3f3b16c",
+  "deployment": "56b622ed-9775-4ba0-884b-d9c8c89acfbd",
   "browserWorkflows": {
-    "passed": 9,
+    "passed": 11,
     "failed": 0
   },
-  "dynamicPDFs": [
+  "forcedWorkerCapacityFallback": true,
+  "validationErrorsNeverFallback": true,
+  "pdfs": [
     {
       "file": "interior.pdf",
-      "dimensionsPoints": [
+      "points": [
         595.2755737304688,
         841.8897705078125
       ],
@@ -18,12 +21,11 @@
         "DZZZZZ+Nunito-Medium",
         "BZZZZZ+OpenSans-Regular"
       ],
-      "embedded": true,
-      "withinBounds": true
+      "allTextAndPathsWithinBounds": true
     },
     {
       "file": "answers.pdf",
-      "dimensionsPoints": [
+      "points": [
         595.2755737304688,
         841.8897705078125
       ],
@@ -32,8 +34,13 @@
         "DZZZZZ+Nunito-Medium",
         "BZZZZZ+OpenSans-Regular"
       ],
-      "embedded": true,
-      "withinBounds": true
+      "allTextAndPathsWithinBounds": true
     }
-  ]
+  ],
+  "png": {
+    "width": 2480,
+    "height": 3508,
+    "dpi": 300
+  },
+  "editorOverlaysExported": false
 }

@@ -1,5 +1,5 @@
 {
-  "observed": "One Cloudflare 1102 response during overlapping export checks",
+  "observed": "Repeated Worker resource-limit responses under overlapping export workload; one retry alone was insufficient",
   "isolatedRetry": {
     "status": 200,
     "milliseconds": 1123
@@ -23,5 +23,5 @@
     "allocationSamples": 0,
     "finding": "No useful sampled allocations; CPU versus memory cause not established"
   },
-  "mitigation": "Avoid overlapping large exports; retry or use smaller page packages if the platform returns a resource limit. No account limits or paid plans changed."
+  "mitigation": "Identical validated print pipeline now runs locally in the browser after transient service/network retries. Forced-capacity and validation-gate live tests pass. Direct API rendering remains platform-capacity bounded. No paid plan or resource-limit increase."
 }

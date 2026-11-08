@@ -7,7 +7,7 @@
 - Real PDFs: Build 006 A4 player/answer pages rendered and checked with PyMuPDF. Exact 595.2756 × 841.8898 pt media boxes; embedded Fredoka Medium, Nunito Medium and Open Sans; all text and drawings within page bounds. See artifacts/build-006/pdf-verification.json. Legacy print tests still pass.
 - Desktop/focus/tablet inspection: 1600×1100 and 820×1180 captures produced no browser errors or document overflow. Screenshots live under docs/screenshots/build-006-*.png.
 - Dependency installation audit: zero vulnerabilities.
-- Live Build 006 staging: original release passed the nine baseline workflows. The retry-only revision exposed repeatable capacity failures under overlapping load. Final browser-adapter release verification is pending; its forced-capacity and validation-gate tests pass locally.
+- Live Build 006 staging: all eleven workflows passed on final version 56b622ed-9775-4ba0-884b-d9c8c89acfbd, including forced-capacity browser rendering and confirmation that validation failures cannot trigger fallback. Final live A4 PDFs embed all three fonts and pass dimension/text/path bounds checks; PNG is 2480×3508 at 300 DPI and editor overlays are absent. See artifacts/build-006/live-verification.json.
 
 The export client retries network/5xx capacity failures once after 1.5 seconds; 4xx validation/approval failures are never retried or bypassed. Repeated platform errors show a clear retry/smaller-package message instead of a JSON parsing error.
 
