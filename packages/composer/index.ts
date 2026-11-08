@@ -39,7 +39,7 @@ export function puzzleSvg(p:Puzzle,solution=false){let out='';const answer=solve
  }
  if(p.kind==='word-search'){
  const cell=Math.min(30,430/p.size),ox=(550-p.size*cell)/2,oy=92;
- for(let y=0;y<p.size;y++)for(let x=0;x<p.size;x++){out+=`<rect x="${ox+x*cell}" y="${oy+y*cell}" width="${cell}" height="${cell}" fill="white" stroke-width=".6"/>`+text(ox+(x+.5)*cell,oy+(y+.68)*cell,p.grid[y][x],16,'text-anchor="middle"');}
+ for(let y=0;y<p.size;y++)for(let x=0;x<p.size;x++){out+=`<rect x="${ox+x*cell}" y="${oy+y*cell}" width="${cell}" height="${cell}" fill="white" stroke-width="1.1"/>`+text(ox+(x+.5)*cell,oy+(y+.68)*cell,p.grid[y][x],16,'text-anchor="middle"');}
  if(solution&&answer?.words)for(const cells of Object.values(answer.words)){const a=cells[0],b=cells[cells.length-1];out+=`<path d="M${ox+(a[0]+.5)*cell} ${oy+(a[1]+.5)*cell}L${ox+(b[0]+.5)*cell} ${oy+(b[1]+.5)*cell}" stroke="#666" stroke-width="18" opacity=".3" stroke-linecap="round"/>`;}
  out+=wrapped(p.words.join(' • '),50,oy+p.size*cell+32,52,15)+text(50,oy+p.size*cell+88,'When all words are found, collect the OAK key.',14);
  }
