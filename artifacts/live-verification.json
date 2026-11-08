@@ -1,0 +1,59 @@
+{
+  "url": "https://adventure-studio-staging.garetha81.workers.dev",
+  "version": "2aa3aaf1-d355-478b-b378-a55e6c7b2b69",
+  "browserErrors": [],
+  "tabletOverflow": false,
+  "pdfs": [
+    {
+      "profile": "no-bleed",
+      "name": "interior",
+      "status": 200,
+      "sha256": "0dc3cc3efd8d2521f0a20805bbddc314f3ba0924d426ff42028d945bc9d7bb21"
+    },
+    {
+      "profile": "no-bleed",
+      "name": "answers",
+      "status": 200,
+      "sha256": "5c1c3cdb48805e7baa1151ff5f2549b50d019a56c40ff8165d43c43bd7210570"
+    },
+    {
+      "profile": "kdp-bleed",
+      "name": "interior",
+      "status": 200,
+      "sha256": "28bb272a0f03c079f96d76c5d143d5b14893faa677701d276715e73aa618c699"
+    },
+    {
+      "profile": "kdp-bleed",
+      "name": "answers",
+      "status": 200,
+      "sha256": "c63d179bda28c6335e048a1a76cf3c79320b4d2e2b02fca79bb71859439eab78"
+    }
+  ],
+  "dynamicExportHTTP": 200,
+  "dynamicPDFs": [
+    {
+      "file": "interior.pdf",
+      "pages": 5,
+      "dimensionsPoints": [
+        612,
+        792
+      ],
+      "embeddedFonts": true,
+      "withinBounds": true
+    },
+    {
+      "file": "answers.pdf",
+      "pages": 5,
+      "dimensionsPoints": [
+        612,
+        792
+      ],
+      "embeddedFonts": true,
+      "withinBounds": true
+    }
+  ],
+  "liveBrowserWorkflows": {
+    "passed": 6,
+    "failed": 0
+  }
+}
