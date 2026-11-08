@@ -1,0 +1,28 @@
+[
+  {
+    "file": "interior.pdf",
+    "dimensionsPoints": [
+      595.2755737304688,
+      841.8897705078125
+    ],
+    "fonts": [
+      "CZZZZZ+Fredoka-Medium",
+      "DZZZZZ+Nunito-Medium",
+      "BZZZZZ+OpenSans-Regular"
+    ],
+    "withinBounds": true
+  },
+  {
+    "file": "answers.pdf",
+    "dimensionsPoints": [
+      595.2755737304688,
+      841.8897705078125
+    ],
+    "fonts": [
+      "CZZZZZ+Fredoka-Medium",
+      "DZZZZZ+Nunito-Medium",
+      "BZZZZZ+OpenSans-Regular"
+    ],
+    "withinBounds": true
+  }
+]

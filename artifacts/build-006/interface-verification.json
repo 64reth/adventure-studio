@@ -1,0 +1,13 @@
+{
+  "origin": "http://127.0.0.1:3000",
+  "desktop": [
+    1600,
+    1100
+  ],
+  "tablet": [
+    820,
+    1180
+  ],
+  "browserErrors": [],
+  "documentOverflow": false
+}

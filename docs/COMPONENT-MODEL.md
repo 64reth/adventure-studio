@@ -1,0 +1,8 @@
+# Versioned canvas components
+`Page.editor` is optional, preserving existing adventure schema version 1 payloads and old approvals. A visual page contains `editor.schemaVersion: 1`, a current canvas state, and bounded past/future snapshots. Canvas state contains print settings, a layout grid, ordered components, embedded referenced asset versions, the selected activity snapshot and the `colouring-book-bold` style ID.
+
+All geometry is in PDF points relative to trim. Print bleed is applied at composition time, with outside-edge mirroring. Layout grids and protected puzzle grids are independent. Functional blocks reference their page's authoritative puzzle configuration; scaling a block does not modify cell coordinates or solutions. Activity configuration participates in undo/redo. Puzzle paths, symbols and clues are not independently editable.
+
+Component kinds: puzzle (functional), text, scenery, character, frame and imported asset. Stable IDs, transform bounds, visibility, lock state and optional group IDs persist. Groups are selection/movement associations, not nested coordinate systems. Multiple selection and basic left/top/distribution operations are supported. Layer array order is paint order. Duplicate excludes principal activities.
+
+The same SVG renderer supplies editor preview and all exports. Physical line-weight normalization keeps original puzzle/illustration contours readable as their components scale. Text wraps using bundled font metrics. Fredoka/Nunito print instances use weight 500, matching the explicit SVG weight; Open Sans remains the original weight for legacy typography.

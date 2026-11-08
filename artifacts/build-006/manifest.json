@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "title": "The Moonlit Garden",
+  "adventureId": "828b7252-4901-4d71-a3f9-f5b22e0ff288",
+  "adventureVersion": 1,
+  "mode": "review",
+  "profile": "no-bleed",
+  "pageCount": 1,
+  "generatedAt": "2026-11-08T15:08:22.623Z",
+  "files": [
+    {
+      "path": "interior.pdf",
+      "bytes": 18178,
+      "sha256": "5ea606c350ef106758d8b748db47d82bb7782606ca8b58405c2905ca31d300ae"
+    },
+    {
+      "path": "answers.pdf",
+      "bytes": 19050,
+      "sha256": "d6ccb5cfb06110b6e3776cfd49e07911fdda91ba5798e4a5eb8860cd321d7ba8"
+    },
+    {
+      "path": "pages/page-001.svg",
+      "bytes": 15173,
+      "sha256": "ad52536b4948b065639c1c2c62f7f9ec678eb2659b750b3eafe6e0f144f3f328"
+    },
+    {
+      "path": "solutions/page-001.svg",
+      "bytes": 17410,
+      "sha256": "e0f483bc48a71084ce7e90732158dafe316b027952b7eac8def3e8aa8b1e5e94"
+    },
+    {
+      "path": "pages/page-001.pdf",
+      "bytes": 18178,
+      "sha256": "b2766c2bfb3689b9a3d68c8ff9d4f7cb877a7fa9e0ac216a75942f700e98bfd0"
+    },
+    {
+      "path": "assets/9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0.svg",
+      "bytes": 1042,
+      "sha256": "9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0"
+    },
+    {
+      "path": "answer-keys.json",
+      "bytes": 1068,
+      "sha256": "435dfd658c9e0a4e4e4a86e2d3bcde2c585dc75c4266379e26d3cdccbaf9945d"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 856,
+      "sha256": "94cdfac41b628227cb9d4100ee06951d96d1edc989a3cb36a2a1914dcbcc9d7d"
+    },
+    {
+      "path": "validation-report.json",
+      "bytes": 319,
+      "sha256": "874df227822ef98590221a3400b683face779e964373bec9f6cf70f22cc5a365"
+    },
+    {
+      "path": "adventure.json",
+      "bytes": 7574,
+      "sha256": "2eb66ba58ae7428f09cba33791f4f49879a30e27b61f5bcadf0a225d96726d9a"
+    },
+    {
+      "path": "pages/page-001.png",
+      "bytes": 1657649,
+      "sha256": "cc68402a51be3dd39b665b79643c3710b163f2b6363e6e05697f5a1a24176e8e"
+    }
+  ],
+  "previewFormat": "300 DPI PNG",
+  "integration": "Story Book Builder handoff only; no import verified"
+}

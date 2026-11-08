@@ -1,0 +1,14 @@
+# Page Studio — Build 006
+Use Page Studio → Add page for a blank visual page. Choose Page setup for trim size, bleed, margins, resolution and the layout grid. The six presets include Letter, A4, A5, square, pocket and custom; Swap orientation exchanges trim dimensions. Layout changes scale component bounds proportionally and surface unsafe or overflowing placements.
+
+Drag an activity tile onto the page, or tap a tile on tablets. Configure difficulty, seed, supported logical grid sizes and a balanced/compact presentation. One authoritative activity belongs to each page. Adding/changing an activity replaces its activity block and leaves unrelated scenery and text intact.
+
+Select a component to move it, drag its lower-right handle to resize, or enter exact point dimensions in the inspector. Decorative objects support rotation. Text has content, font, size, alignment and line spacing. Characters record identity, pose/expression references, facing, role and linked clues. Their original placeholder artwork has one pose; facial expression metadata is reserved for Build 007.
+
+Shift-click selects multiple objects. Use the toolbar to align left/top, distribute horizontally, group/ungroup, duplicate decorative selections and change layer order. The Layers tab controls visibility and order. Locked positions ignore pointer drags. Keyboard: arrows nudge; Shift+arrows nudge 10 points; Ctrl/Command+Z undo; Shift+Ctrl/Command+Z or Ctrl/Command+Y redo; Ctrl/Command+D duplicate; Delete removes; Escape deselects; Space+drag pans. Inspector fields provide keyboard alternatives to pointer actions.
+
+Fit page adjusts zoom to the viewport. Actual print size uses 96 CSS pixels per inch; physical display calibration still depends on the screen/browser. Monochrome preview removes all editor overlays. Expand workspace gives the canvas the available window. Grid, guides, selection and handles never enter exported SVGs/PDFs/PNGs.
+
+Save layout commits the versioned composition to the current adventure and invalidates its previous approval. Pending edits also have a per-adventure, per-page browser draft backup for recovery after reload. Undo history is bounded at 30 snapshots and 600 KB. Review notes and explicit page/art approval remain required. Imported asset rights approval is separate; refresh asset reviews in My assets before saving if necessary.
+
+Existing legacy pages load unchanged. Editable legacy pages are presented as a migration draft; Save layout opts that page into the visual renderer. Existing approved legacy pages keep their original renderer until explicitly reopened. Validation flags unsafe margins, text overflow, a missing/multiple activity, activity overlap, stale puzzle references, broken linked clues and invalid imported SVGs. Revert the last edit with Undo. Invalid layouts cannot be exported.
