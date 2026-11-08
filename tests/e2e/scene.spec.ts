@@ -1,0 +1,2 @@
+import {test,expect} from '@playwright/test';
+test('scene separates artwork from geometry and toggles guides and solutions',async({page})=>{await page.goto('/');await expect(page.getByRole('button',{name:'Create adventure',exact:true})).toBeEnabled();await expect(page.locator('[data-layer="puzzle"]')).toBeVisible();await page.getByLabel('Artwork layer').uncheck();await expect(page.locator('[data-layer="artwork"]')).toHaveCount(0);await expect(page.locator('[data-layer="puzzle"]')).toBeVisible();await page.getByLabel('Print guides').check();});

@@ -1,0 +1,4 @@
+# Artwork pipeline
+The free original-svg provider builds project-authored line-art castles, trees and a dragon. No paid calls occur. The artwork is prototype-quality procedural illustration, awaiting human art direction and commercial review. SHA-256 provenance records creation prompts, source, version, zero cost and pending rights review.
+
+Artwork and puzzle layers are separate SVG groups. The page preview supports hiding decorative artwork, solution overlays, mirrored trim/gutter guides, zoom and overflow panning. Puzzle geometry cannot be modified by the provider. Top-down composition is implemented; isometric/panoramic scene authoring is not yet implemented despite schema support. External providers are blocked by SpendingGuard until separate spending authorisation; no live provider integration is claimed.
