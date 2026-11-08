@@ -1,0 +1,6 @@
+# Five-page visual review — 2026-11-08
+Inspected all five 300 DPI player PNGs and rendered PDFs. Automated checks render both profiles and all answer pages. Player pages have large legible type, clear instructions and uncluttered activity areas. Courtyard clue/wall collision corrected; word list spacing improved. Real PDF rendering found and corrected SVG inch-to-point scaling overflow; all text and paths now fall within the media box.
+
+The five mechanics are playable with explicit keys and independently calculated solutions. The narrative chain grants a gate, an observatory map, SUN password, OAK key and the river chapter objective. Page 5 records prior discoveries before rune decoding. The library key is an explicit completion reward, not a hidden-message extraction.
+
+Outstanding human review: procedural scenery is sparse and repetitive, not the detailed sprawling commercial illustration specified as the final art direction. Courtyard activity uses visible symbol clues rather than sophisticated hidden-object art. Difficulty labels currently tune maze size only. Rune pips need child playtesting for distinguishability. No human page approval has been fabricated. Prototype assets remain review copies. Do not scale to full books before owner review.

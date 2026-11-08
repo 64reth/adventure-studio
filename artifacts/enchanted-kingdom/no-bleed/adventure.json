@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "id": "00000000-0000-4000-8000-000000000001",
+  "title": "The Enchanted Kingdom",
+  "series": "Explore, Colour & Solve",
+  "theme": "Enchanted Kingdom",
+  "premise": "Princess Mira and Rowan investigate the vanished last dragon before the castle protection fails.",
+  "targetAge": [
+    7,
+    10
+  ],
+  "difficultyRange": [
+    1,
+    3
+  ],
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "title": "The Vanishing",
+      "objective": "Discover why the last dragon left the castle",
+      "location": "Royal castle",
+      "pages": [
+        "page-1",
+        "page-2",
+        "page-3",
+        "page-4",
+        "page-5"
+      ],
+      "entryConditions": [],
+      "completionRewards": [
+        "chapter:river"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "id": "page-1",
+      "chapterId": "chapter-1",
+      "number": 1,
+      "title": "The Royal Courtyard",
+      "story": "Princess Mira has left a trail of royal symbols. Find all five to discover the gate to her tower.",
+      "instructions": "Find each symbol and its number. Read them in the order below. Choose the gate with the matching code.",
+      "mechanic": "route",
+      "seed": "enchanted-001-0",
+      "difficulty": "standard",
+      "config": {},
+      "dependencies": [],
+      "requiredClues": [],
+      "rewards": [
+        "gate:South"
+      ],
+      "status": "Needs Review",
+      "scene": {
+        "perspective": "top-down",
+        "layers": [
+          "artwork",
+          "puzzle",
+          "text"
+        ],
+        "protectedGeometry": true,
+        "theme": "Enchanted Kingdom"
+      },
+      "assets": [],
+      "reviewNote": "",
+      "revision": 0
+    },
+    {
+      "id": "page-2",
+      "chapterId": "chapter-1",
+      "number": 2,
+      "title": "The Castle Labyrinth",
+      "story": "Beyond the gate, Rowan discovers an old passage to the observatory. Its side corridors lead nowhere.",
+      "instructions": "Enter at START. Trace a path through the passages to EXIT. Never cross a black wall.",
+      "mechanic": "maze",
+      "seed": "enchanted-001-1",
+      "difficulty": "standard",
+      "config": {},
+      "dependencies": [
+        "page-1"
+      ],
+      "requiredClues": [
+        "gate:South"
+      ],
+      "rewards": [
+        "observatory-map"
+      ],
+      "status": "Needs Review",
+      "scene": {
+        "perspective": "top-down",
+        "layers": [
+          "artwork",
+          "puzzle",
+          "text"
+        ],
+        "protectedGeometry": true,
+        "theme": "Enchanted Kingdom"
+      },
+      "assets": [],
+      "reviewNote": "",
+      "revision": 0
+    },
+    {
+      "id": "page-3",
+      "chapterId": "chapter-1",
+      "number": 3,
+      "title": "The Wizard's Window",
+      "story": "The observatory window conceals a password. Mira thinks its numbers are a message rather than a spell.",
+      "instructions": "Colour the cells marked 2 or 4. Leave 1 and 3 white. Read the three letters from left to right.",
+      "mechanic": "reveal",
+      "seed": "enchanted-001-2",
+      "difficulty": "standard",
+      "config": {},
+      "dependencies": [
+        "page-2"
+      ],
+      "requiredClues": [
+        "observatory-map"
+      ],
+      "rewards": [
+        "password:SUN"
+      ],
+      "status": "Needs Review",
+      "scene": {
+        "perspective": "top-down",
+        "layers": [
+          "artwork",
+          "puzzle",
+          "text"
+        ],
+        "protectedGeometry": true,
+        "theme": "Enchanted Kingdom"
+      },
+      "assets": [],
+      "reviewNote": "",
+      "revision": 0
+    },
+    {
+      "id": "page-4",
+      "chapterId": "chapter-1",
+      "number": 4,
+      "title": "The Royal Library",
+      "story": "The librarian will lend you a key if you can locate six lost magical words in the shelves.",
+      "instructions": "Find every listed word. Words run right or down. Circle them, then collect the named key.",
+      "mechanic": "word-search",
+      "seed": "enchanted-001-3",
+      "difficulty": "standard",
+      "config": {},
+      "dependencies": [
+        "page-3"
+      ],
+      "requiredClues": [],
+      "rewards": [
+        "key:OAK"
+      ],
+      "status": "Needs Review",
+      "scene": {
+        "perspective": "top-down",
+        "layers": [
+          "artwork",
+          "puzzle",
+          "text"
+        ],
+        "protectedGeometry": true,
+        "theme": "Enchanted Kingdom"
+      },
+      "assets": [],
+      "reviewNote": "",
+      "revision": 0
+    },
+    {
+      "id": "page-5",
+      "chapterId": "chapter-1",
+      "number": 5,
+      "title": "The Dragon's Chamber",
+      "story": "The dragon left willingly to investigate a failing river spell. Mira needs your discoveries to open the chamber.",
+      "instructions": "Record the gate, password and key from earlier pages. Decode the runes to learn where the next chapter begins.",
+      "mechanic": "cipher",
+      "seed": "enchanted-001-4",
+      "difficulty": "standard",
+      "config": {},
+      "dependencies": [
+        "page-4"
+      ],
+      "requiredClues": [
+        "gate:South",
+        "password:SUN",
+        "key:OAK"
+      ],
+      "rewards": [
+        "chapter:river"
+      ],
+      "status": "Needs Review",
+      "scene": {
+        "perspective": "top-down",
+        "layers": [
+          "artwork",
+          "puzzle",
+          "text"
+        ],
+        "protectedGeometry": true,
+        "theme": "Enchanted Kingdom"
+      },
+      "assets": [],
+      "reviewNote": "",
+      "revision": 0
+    }
+  ],
+  "characters": [
+    "Princess Mira — mapmaker",
+    "Rowan — apprentice naturalist"
+  ],
+  "locations": [
+    "Royal courtyard",
+    "Observatory",
+    "Library",
+    "Dragon chamber"
+  ],
+  "inventory": [],
+  "status": "Draft",
+  "version": 1,
+  "updatedAt": "2026-11-08T13:42:52.293Z"
+}

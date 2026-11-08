@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "title": "The Enchanted Kingdom",
+  "adventureId": "00000000-0000-4000-8000-000000000001",
+  "adventureVersion": 1,
+  "mode": "review",
+  "profile": "kdp-bleed",
+  "pageCount": 5,
+  "generatedAt": "2026-11-08T13:42:56.454Z",
+  "files": [
+    {
+      "path": "interior.pdf",
+      "sha256": "9e5d80ed9c29b6683e950c615bd7ad6b025c4439202783f8860ae9c2235da961"
+    },
+    {
+      "path": "answers.pdf",
+      "sha256": "38f2b648ac54b9451a30f167341688907ffa1512f2a34ee41bfaeb43e52b323a"
+    },
+    {
+      "path": "pages/page-001.svg",
+      "sha256": "08448d03136e7874576cf08a36247205c8e6f8ad21b16af06055e536b9fe25b5"
+    },
+    {
+      "path": "solutions/page-001.svg",
+      "sha256": "58b5ebfbf7d127866ac747448a7abf94b0c767337686b241267b17dde3240a4a"
+    },
+    {
+      "path": "pages/page-001.pdf",
+      "sha256": "1f947387518b1b3daa60cc07fe205c375f79a9216849306e2f6d342efb412ee7"
+    },
+    {
+      "path": "assets/9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0.svg",
+      "sha256": "9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0"
+    },
+    {
+      "path": "pages/page-002.svg",
+      "sha256": "e4852c62c5bad21daf1ca9e7e65ffb72deef128bf5092bb32e0c9d9ea2c44627"
+    },
+    {
+      "path": "solutions/page-002.svg",
+      "sha256": "9bf090bba0ec62e881e5aa146d463a398d9089795090e6d57a0ddcb656982052"
+    },
+    {
+      "path": "pages/page-002.pdf",
+      "sha256": "01b17c7efecc7403f788e248f1bffd01c2f9ba899b0c4e0f2e2400598bf15f6a"
+    },
+    {
+      "path": "assets/9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0.svg",
+      "sha256": "9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0"
+    },
+    {
+      "path": "pages/page-003.svg",
+      "sha256": "0025ef91a7507e5412a4706278e12eddc92651209f158e30770700b5ba7996f7"
+    },
+    {
+      "path": "solutions/page-003.svg",
+      "sha256": "c054a42f33a4025f47659f4417f20c35a37e9781353609f559f5024bc373ae24"
+    },
+    {
+      "path": "pages/page-003.pdf",
+      "sha256": "a70e828e1aa7fe926bbd6eee55039145dca297ead6111d2e4baa6509fcd1eea0"
+    },
+    {
+      "path": "assets/3db7629290a92ab5f231292566c4864662a6d4b87154295ffea6cb49474868d9.svg",
+      "sha256": "3db7629290a92ab5f231292566c4864662a6d4b87154295ffea6cb49474868d9"
+    },
+    {
+      "path": "pages/page-004.svg",
+      "sha256": "c626073113d69c6e66dbe178cd459a8985662272b7b1ef16aad6c69a18f687a2"
+    },
+    {
+      "path": "solutions/page-004.svg",
+      "sha256": "f93c622d3c850897f1d906734673a21b12d6eae2955f9ecbaf8ffe80ca97443c"
+    },
+    {
+      "path": "pages/page-004.pdf",
+      "sha256": "911d2895af3e583d8a5d1fcf19ef11b942ffbee78bfa4aaa5284f93b7f65e592"
+    },
+    {
+      "path": "assets/abec8c6b2c38dca81e41846acce0ae27061559d656424442fe7d512838147d5d.svg",
+      "sha256": "abec8c6b2c38dca81e41846acce0ae27061559d656424442fe7d512838147d5d"
+    },
+    {
+      "path": "pages/page-005.svg",
+      "sha256": "eef42a8f5316cd50b56d72250c01d174eb71e667f5db96260aad560f0e12f357"
+    },
+    {
+      "path": "solutions/page-005.svg",
+      "sha256": "69207f69c0192c4c30c6e6306de4f6b418818bbf6f9b52fe23c2980246018585"
+    },
+    {
+      "path": "pages/page-005.pdf",
+      "sha256": "de5a1de214ff12d8e8afde8a6b3291696dd12174d2004e94d23ba97d47eff7e9"
+    },
+    {
+      "path": "assets/b2984a2aeaa0e780857ac718f5fe284ac82a38a0eba828d121544ef4fd81f813.svg",
+      "sha256": "b2984a2aeaa0e780857ac718f5fe284ac82a38a0eba828d121544ef4fd81f813"
+    },
+    {
+      "path": "answer-keys.json",
+      "sha256": "00e4b9c2ca1d063f6a4d850e3abb2f52d80b58315fdf5281ec1e2fc377362da6"
+    },
+    {
+      "path": "provenance.json",
+      "sha256": "4451316acfa094a701c7d46f0ae6219309343e2025bd85bd2955c8fafb98581d"
+    },
+    {
+      "path": "validation-report.json",
+      "sha256": "bb633b4b86807a7aa1a59c0b5941509237cced5b0f733476a0ff331725107517"
+    },
+    {
+      "path": "adventure.json",
+      "sha256": "e84c44bf5dee8a2bcc3f88f4a0040390ec7c62821299bbf0831f1e3145254773"
+    }
+  ],
+  "previewFormat": "300 DPI PNG previews are added by browser or CLI exporter",
+  "integration": "Story Book Builder handoff only; no import verified"
+}

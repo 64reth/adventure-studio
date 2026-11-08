@@ -25,7 +25,7 @@ function generate(kind:Mechanic,raw:Config,seed:string):Puzzle{
  return {kind,width:w,height:h,edges,start:0,end:w*h-1};
  }
  if(kind==='route'){
- const values=shuffle([1,2,3,4,5],rng),clues=['Crown','Leaf','Star','Moon','Flame'].map((symbol,i)=>({symbol,value:values[i],x:[115,325,480,190,440][i],y:[95,115,210,245,350][i]}));
+ const values=shuffle([1,2,3,4,5],rng),clues=['Crown','Leaf','Star','Moon','Flame'].map((symbol,i)=>({symbol,value:values[i],x:[115,325,445,180,440][i],y:[115,125,205,270,350][i]}));
  const codes=[values,...Array.from({length:3},(_,i)=>values.map((n,j)=>j===i?(n%5)+1:n))];
  return {kind,clues,routes:shuffle(codes,rng).map((code,i)=>({name:['North','East','South','West'][i],code}))};
  }

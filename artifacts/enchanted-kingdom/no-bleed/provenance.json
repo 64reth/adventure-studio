@@ -1,0 +1,67 @@
+[
+  {
+    "id": "9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0",
+    "type": "svg",
+    "provider": "original-svg",
+    "source": "Adventure Studio original procedural SVG",
+    "creationRecord": "Original Enchanted Kingdom colouring scenery. Bold black outlines, white enclosed areas, no shading. Perspective top-down. Decorative perimeter only. Do not alter protected route puzzle geometry. Seed enchanted-001-0. No third-party characters or artist imitation.",
+    "version": "1.0.0",
+    "createdAt": "2026-11-08T13:42:52.430Z",
+    "licence": "Original project-authored artwork; human commercial review required",
+    "rightsReview": "Needs Review",
+    "contentHash": "9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0",
+    "file": "assets/9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0.svg"
+  },
+  {
+    "id": "9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0",
+    "type": "svg",
+    "provider": "original-svg",
+    "source": "Adventure Studio original procedural SVG",
+    "creationRecord": "Original Enchanted Kingdom colouring scenery. Bold black outlines, white enclosed areas, no shading. Perspective top-down. Decorative perimeter only. Do not alter protected maze puzzle geometry. Seed enchanted-001-1. No third-party characters or artist imitation.",
+    "version": "1.0.0",
+    "createdAt": "2026-11-08T13:42:52.439Z",
+    "licence": "Original project-authored artwork; human commercial review required",
+    "rightsReview": "Needs Review",
+    "contentHash": "9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0",
+    "file": "assets/9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0.svg"
+  },
+  {
+    "id": "3db7629290a92ab5f231292566c4864662a6d4b87154295ffea6cb49474868d9",
+    "type": "svg",
+    "provider": "original-svg",
+    "source": "Adventure Studio original procedural SVG",
+    "creationRecord": "Original Enchanted Kingdom colouring scenery. Bold black outlines, white enclosed areas, no shading. Perspective top-down. Decorative perimeter only. Do not alter protected reveal puzzle geometry. Seed enchanted-001-2. No third-party characters or artist imitation.",
+    "version": "1.0.0",
+    "createdAt": "2026-11-08T13:42:52.450Z",
+    "licence": "Original project-authored artwork; human commercial review required",
+    "rightsReview": "Needs Review",
+    "contentHash": "3db7629290a92ab5f231292566c4864662a6d4b87154295ffea6cb49474868d9",
+    "file": "assets/3db7629290a92ab5f231292566c4864662a6d4b87154295ffea6cb49474868d9.svg"
+  },
+  {
+    "id": "abec8c6b2c38dca81e41846acce0ae27061559d656424442fe7d512838147d5d",
+    "type": "svg",
+    "provider": "original-svg",
+    "source": "Adventure Studio original procedural SVG",
+    "creationRecord": "Original Enchanted Kingdom colouring scenery. Bold black outlines, white enclosed areas, no shading. Perspective top-down. Decorative perimeter only. Do not alter protected word-search puzzle geometry. Seed enchanted-001-3. No third-party characters or artist imitation.",
+    "version": "1.0.0",
+    "createdAt": "2026-11-08T13:42:52.471Z",
+    "licence": "Original project-authored artwork; human commercial review required",
+    "rightsReview": "Needs Review",
+    "contentHash": "abec8c6b2c38dca81e41846acce0ae27061559d656424442fe7d512838147d5d",
+    "file": "assets/abec8c6b2c38dca81e41846acce0ae27061559d656424442fe7d512838147d5d.svg"
+  },
+  {
+    "id": "b2984a2aeaa0e780857ac718f5fe284ac82a38a0eba828d121544ef4fd81f813",
+    "type": "svg",
+    "provider": "original-svg",
+    "source": "Adventure Studio original procedural SVG",
+    "creationRecord": "Original Enchanted Kingdom colouring scenery. Bold black outlines, white enclosed areas, no shading. Perspective top-down. Decorative perimeter only. Do not alter protected cipher puzzle geometry. Seed enchanted-001-4. No third-party characters or artist imitation.",
+    "version": "1.0.0",
+    "createdAt": "2026-11-08T13:42:52.488Z",
+    "licence": "Original project-authored artwork; human commercial review required",
+    "rightsReview": "Needs Review",
+    "contentHash": "b2984a2aeaa0e780857ac718f5fe284ac82a38a0eba828d121544ef4fd81f813",
+    "file": "assets/b2984a2aeaa0e780857ac718f5fe284ac82a38a0eba828d121544ef4fd81f813.svg"
+  }
+]

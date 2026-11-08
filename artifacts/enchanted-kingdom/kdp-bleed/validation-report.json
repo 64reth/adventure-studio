@@ -1,0 +1,13 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [
+    "Human visual, difficulty and commercial review required.",
+    "Five-page prototype is below KDP minimum book length.",
+    "No automated test constitutes legal clearance."
+  ],
+  "profile": "kdp-bleed",
+  "mode": "review",
+  "pageCount": 5,
+  "schemaVersion": 1
+}

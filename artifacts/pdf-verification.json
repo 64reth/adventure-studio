@@ -1,0 +1,50 @@
+[
+  {
+    "profile": "no-bleed",
+    "file": "interior.pdf",
+    "pages": 5,
+    "dimensionsPoints": [
+      612,
+      792
+    ],
+    "embeddedFonts": true,
+    "allTextAndPathsWithinMediaBox": true,
+    "rendered": true
+  },
+  {
+    "profile": "no-bleed",
+    "file": "answers.pdf",
+    "pages": 5,
+    "dimensionsPoints": [
+      612,
+      792
+    ],
+    "embeddedFonts": true,
+    "allTextAndPathsWithinMediaBox": true,
+    "rendered": true
+  },
+  {
+    "profile": "kdp-bleed",
+    "file": "interior.pdf",
+    "pages": 5,
+    "dimensionsPoints": [
+      621,
+      810
+    ],
+    "embeddedFonts": true,
+    "allTextAndPathsWithinMediaBox": true,
+    "rendered": true
+  },
+  {
+    "profile": "kdp-bleed",
+    "file": "answers.pdf",
+    "pages": 5,
+    "dimensionsPoints": [
+      621,
+      810
+    ],
+    "embeddedFonts": true,
+    "allTextAndPathsWithinMediaBox": true,
+    "rendered": true
+  }
+]

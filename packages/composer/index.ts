@@ -35,11 +35,12 @@ export function puzzleSvg(p:Puzzle,solution=false){let out='';const answer=solve
  const cell=Math.min(30,430/p.size),ox=(550-p.size*cell)/2,oy=92;
  for(let y=0;y<p.size;y++)for(let x=0;x<p.size;x++){out+=`<rect x="${ox+x*cell}" y="${oy+y*cell}" width="${cell}" height="${cell}" fill="white" stroke-width=".6"/>`+text(ox+(x+.5)*cell,oy+(y+.68)*cell,p.grid[y][x],16,'text-anchor="middle"');}
  if(solution&&answer?.words)for(const cells of Object.values(answer.words)){const a=cells[0],b=cells[cells.length-1];out+=`<path d="M${ox+(a[0]+.5)*cell} ${oy+(a[1]+.5)*cell}L${ox+(b[0]+.5)*cell} ${oy+(b[1]+.5)*cell}" stroke="#666" stroke-width="18" opacity=".3" stroke-linecap="round"/>`;}
- out+=wrapped(p.words.join('   '),50,oy+p.size*cell+32,52,15)+text(50,oy+p.size*cell+88,'When all words are found, collect the OAK key.',14);
+ out+=wrapped(p.words.join(' • '),50,oy+p.size*cell+32,52,15)+text(50,oy+p.size*cell+88,'When all words are found, collect the OAK key.',14);
  }
  if(p.kind==='cipher'){
  out+=text(42,105,'Use the rune key to decode the next destination.',15);
  const letters=Object.keys(p.key);letters.forEach((letter,i)=>{const x=45+(i%9)*57,y=145+Math.floor(i/9)*48;out+=rune(p.key[letter],x,y)+text(x+15,y+5,letter,14);});
+ out+=text(42,285,'Gate: ______   Password: ______   Key: ______',13);
  p.encoded.forEach((word,wi)=>{const y=330+wi*65;word.forEach((code,i)=>{const x=75+i*37;out+=rune(code,x,y,1.3)+text(x,y+32,solution?Object.entries(p.key).find(([,v])=>v===code)![0]:'_',18,'text-anchor="middle"');});});
  }
  return `<g data-layer="puzzle" fill="none" stroke="#111" stroke-width="1.5">${out}</g>`;

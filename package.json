@@ -11,7 +11,7 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit -p apps/studio/tsconfig.json",
     "e2e": "playwright test",
-    "prototype": "tsx scripts/export-prototype.ts",
+    "prototype": "node --import tsx scripts/export-prototype.ts",
     "deploy": "npm run deploy -w studio"
   },
   "dependencies": {
