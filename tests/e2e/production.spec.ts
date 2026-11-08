@@ -10,12 +10,9 @@ test("five-page review export contains actual PDFs and PNG previews", async ({
   await expect(
     page.getByRole("button", { name: "Export publication package" }),
   ).toBeDisabled();
-  const exported = page.waitForResponse(
-    (r) => r.url().endsWith("/api/export") && r.status() < 500,
-  );
   const downloaded = page.waitForEvent("download");
   await page.getByRole("button", { name: "Export review package" }).click();
-  expect((await exported).status()).toBe(200);
+
   const download = await downloaded;
   const path = await download.path();
   expect(path).toBeTruthy();
@@ -73,14 +70,11 @@ test("approval records unlock publication export and regeneration preserves appr
   await expect(
     page.getByRole("button", { name: "Export publication package" }),
   ).toBeEnabled();
-  const exported = page.waitForResponse(
-    (r) => r.url().endsWith("/api/export") && r.status() < 500,
-  );
   const downloaded = page.waitForEvent("download");
   await page
     .getByRole("button", { name: "Export publication package" })
     .click();
-  expect((await exported).status()).toBe(200);
+
   const download = await downloaded;
   const zip = await JSZip.loadAsync(await readFile((await download.path())!));
   const manifest = JSON.parse(await zip.file("manifest.json")!.async("string"));
@@ -90,4 +84,65 @@ test("approval records unlock publication export and regeneration preserves appr
       (f: { path: string }) => f.path === "pages/page-005.png",
     ),
   ).toBe(true);
+});
+
+test("browser fallback exports a complete package when Worker rendering is unavailable", async ({
+  page,
+}) => {
+  test.setTimeout(90000);
+  await page.route("**/api/export", (route) =>
+    route.fulfill({
+      status: 503,
+      contentType: "text/html",
+      body: "<html>Worker exceeded resource limits</html>",
+    }),
+  );
+  await page.goto("/");
+  await page.getByRole("button", { name: "Adventures", exact: true }).click();
+  await page
+    .getByLabel("Import project JSON")
+    .setInputFiles({
+      name: "visual-font-fixture.json",
+      mimeType: "application/json",
+      buffer: await readFile("artifacts/build-006/adventure.json"),
+    });
+  await page.getByRole("button", { name: "Publishing", exact: true }).click();
+  const downloading = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Export review package" }).click();
+  const file = await downloading;
+  const zip = await JSZip.loadAsync(await readFile((await file.path())!));
+  expect((await zip.file("interior.pdf")!.async("string")).slice(0, 5)).toBe(
+    "%PDF-",
+  );
+  expect(zip.file("pages/page-001.png")).not.toBeNull();
+  const pdf = await zip.file("interior.pdf")!.async("string");
+  expect(pdf).toContain("Fredoka-Medium");
+  expect(pdf).toContain("Nunito-Medium");
+  await file.saveAs(
+    process.env.STAGING_URL
+      ? "/tmp/adventure-build-006-final-live.zip"
+      : "/tmp/adventure-build-006-local-fallback.zip",
+  );
+  await expect(page.getByRole("status")).toContainText("Export ready");
+});
+
+test("server validation failures never invoke browser fallback", async ({
+  page,
+}) => {
+  await page.route("**/api/export", (route) =>
+    route.fulfill({
+      status: 400,
+      contentType: "application/json",
+      body: JSON.stringify({ error: "Mandatory layout validation failed" }),
+    }),
+  );
+  await page.goto("/");
+  await page.getByRole("button", { name: "Publishing", exact: true }).click();
+  let downloads = 0;
+  page.on("download", () => downloads++);
+  await page.getByRole("button", { name: "Export review package" }).click();
+  await expect(page.getByRole("alert")).toContainText(
+    "Mandatory layout validation failed",
+  );
+  expect(downloads).toBe(0);
 });

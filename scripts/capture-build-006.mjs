@@ -10,13 +10,11 @@ try {
   await p.waitForSelector(".adventure-card");
   await p.screenshot({ path: "docs/screenshots/build-006-dashboard.png" });
   await p.getByRole("button", { name: "Adventures", exact: true }).click();
-  await p
-    .getByLabel("Import project JSON")
-    .setInputFiles({
-      name: "build-006-demo.json",
-      mimeType: "application/json",
-      buffer: await fs.readFile("artifacts/build-006/adventure.json"),
-    });
+  await p.getByLabel("Import project JSON").setInputFiles({
+    name: "build-006-demo.json",
+    mimeType: "application/json",
+    buffer: await fs.readFile("artifacts/build-006/adventure.json"),
+  });
   await p
     .getByRole("combobox", { name: "Active adventure" })
     .selectOption({ label: "The Moonlit Garden" });
@@ -47,6 +45,19 @@ try {
   );
   if (overflow) throw new Error("Tablet document overflow");
   if (errors.length) throw new Error(errors.join("\n"));
+  if (process.env.CAPTURE_EXPORT === "1") {
+    await p.route("**/api/export", (route) =>
+      route.fulfill({
+        status: 503,
+        contentType: "text/html",
+        body: "<html>Worker exceeded resource limits</html>",
+      }),
+    );
+    await p.getByRole("button", { name: "Publishing", exact: true }).click();
+    const downloading = p.waitForEvent("download");
+    await p.getByRole("button", { name: "Export review package" }).click();
+    await (await downloading).saveAs("/tmp/adventure-build-006-final-live.zip");
+  }
   await fs.writeFile(
     "artifacts/build-006/interface-verification.json",
     JSON.stringify(

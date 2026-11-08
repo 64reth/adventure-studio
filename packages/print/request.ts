@@ -1,3 +1,4 @@
+export class ExportCapacityError extends Error {}
 /** Export generation is read-only/idempotent; retry transient capacity failures once. */
 export async function requestExport(
   body: unknown,
@@ -25,7 +26,7 @@ export async function requestExport(
         await pause(1500);
         continue;
       }
-      throw new Error(
+      throw new ExportCapacityError(
         "Export connection failed. Your saved layout is safe; retry when the connection is available.",
       );
     }
@@ -37,7 +38,7 @@ export async function requestExport(
       continue;
     }
     if (response.status >= 500)
-      throw new Error(
+      throw new ExportCapacityError(
         "The staging export service reached a temporary resource limit. Try again shortly or export fewer pages. Your saved layout is safe.",
       );
     let message = `Export failed (HTTP ${response.status})`;

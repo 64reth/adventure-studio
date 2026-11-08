@@ -34,7 +34,10 @@ import {
 } from "../../../packages/puzzles/index";
 import { LocalArtworkProvider } from "../../../packages/artwork/index";
 import { compose } from "../../../packages/composer/index";
-import { requestExport } from "../../../packages/print/request";
+import {
+  requestExport,
+  ExportCapacityError,
+} from "../../../packages/print/request";
 import { setPngDpi } from "../../../packages/print/png";
 import { refreshManifest } from "../../../packages/print/manifest";
 import { layout, type PrintProfile } from "../../../packages/print/index";
@@ -228,26 +231,33 @@ export default function Studio() {
     if (!current) return;
     setBusy(true);
     try {
-      const response = await requestExport(
-        {
-          adventure: {
-            ...current,
-            pages: current.pages.map((p) =>
-              p.editor
-                ? { ...p, editor: { ...p.editor, past: [], future: [] } }
-                : p,
-            ),
-          },
-          mode,
-          profile,
+      const input = {
+        adventure: {
+          ...current,
+          pages: current.pages.map((p) =>
+            p.editor
+              ? { ...p, editor: { ...p.editor, past: [], future: [] } }
+              : p,
+          ),
         },
-        {
+        mode,
+        profile,
+      };
+      let zip: import("jszip");
+      try {
+        const response = await requestExport(input, {
           onRetry: () =>
             setNotice("Export service is temporarily busy. Retrying once…"),
-        },
-      );
-      const JSZip = (await import("jszip")).default,
+        });
+        const JSZip = (await import("jszip")).default;
         zip = await JSZip.loadAsync(await response.arrayBuffer());
+      } catch (e) {
+        if (!(e instanceof ExportCapacityError)) throw e;
+        setNotice("Rendering the print package on this device…");
+        const { browserExport } =
+          await import("../../../packages/print/browser");
+        zip = await browserExport(input);
+      }
       await document.fonts.ready;
       let fontCSS = "";
       for (const [family, url] of Object.entries({

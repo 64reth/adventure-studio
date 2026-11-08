@@ -14,7 +14,7 @@ Implemented a visual, monochrome page-production editor alongside the existing f
 - A shared SVG renderer for canvas/PDF/PNG/source exports; saved visual print settings and fixed-weight embedded print fonts; PNG DPI metadata; source/answer/provenance/manifests and current approval gates.
 
 ## Verification
-40 unit/integration tests, strict type checks, production build and nine local browser workflows passed. The complete visual workflow includes a blank A4 page, dragged maze, scenery/text, resize handle, undo/redo, save, reload, validation, approval and a real mixed-page PDF/PNG package download. Device-local asset reuse and keyboard/draft recovery are tested.
+40 unit/integration tests, strict type checks, production build and eleven local browser workflows passed. The complete visual workflow includes a blank A4 page, dragged maze, scenery/text, resize handle, undo/redo, save, reload, validation, approval and a real mixed-page PDF/PNG package download. Device-local asset reuse and keyboard/draft recovery are tested.
 
 Actual A4 player/answer PDFs were rendered, not merely inspected as SVGs. All three fonts embed, dimensions are correct, and all text/drawing bounds fit. See artifacts/build-006/pdf-verification.json. Desktop/tablet screenshots show no browser errors or page overflow.
 
@@ -24,7 +24,7 @@ Release commit: 3f3b16c — `feat: build visual Page Studio and playful UI` — 
 
 Deployment: 24c0de1d-c43c-40e4-bfc0-791d316ca4b4.
 
-All nine live browser workflows passed. Freshly generated live A4 player/answer PDFs embed all three fonts and pass dimension/text/path bounds checks. Deployed desktop/focus/tablet screenshots are captured below. One Cloudflare resource-limit response occurred while export checks overlapped; an isolated retry and three concurrent retries succeeded. The short heap capture had no useful allocation samples, so no CPU/memory root cause is claimed. Avoid overlapping large exports or use smaller packages if it recurs. The client now retries transient network/5xx export failures once after 1.5 seconds and gives a clear capacity message on repeated failure. Approval/validation errors are never retried. No paid resource-limit increase was made.
+The original release passed nine live workflows. Final eleven-workflow live verification of the browser fallback adapter is pending. Freshly generated live A4 player/answer PDFs embed all three fonts and pass dimension/text/path bounds checks. Deployed desktop/focus/tablet screenshots are captured below. One Cloudflare resource-limit response occurred while export checks overlapped; an isolated retry and three concurrent retries succeeded. The short heap capture had no useful allocation samples, so no CPU/memory root cause is claimed. Avoid overlapping large exports or use smaller packages if it recurs. The client now retries transient network/5xx export failures once after 1.5 seconds and gives a clear capacity message on repeated failure. Approval/validation errors are never retried. No paid resource-limit increase was made.
 
 ## Screenshots
 - ../screenshots/build-006-dashboard.png
@@ -37,3 +37,5 @@ artifacts/build-006 includes an editable A4 Moonlit Garden composition, player/a
 
 ## Boundaries and remaining limitations
 Full modular character creation remains Build 007. Detailed world/scene authoring remains Build 008. Functional puzzle paths/clues remain protected inside one block. Grouping/basic alignment are intentionally simpler than a full desktop publishing package. SVG import uses a strict safe subset; raster thresholding is for simple icons. Storage remains browser-local with ordinary quotas; no shared persistence migration, paid AI request or unrelated resource/DNS change occurred. See docs/KNOWN-LIMITATIONS.md for the complete current limits.
+
+The shared export pipeline now accepts either the Node/Worker PDFKit engine or the lazy-loaded browser PDFKit engine. After transient retries, Worker/network capacity failures use local rendering with identical schema, puzzle, layout, provenance and approval validation. A forced-503 browser test verifies the three-font A4 package; a forced-400 test verifies that validation errors cannot invoke fallback. Real browser-generated PDFs also passed dimension, embedded-font and bounds inspection.

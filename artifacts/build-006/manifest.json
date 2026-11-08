@@ -1,37 +1,52 @@
 {
   "schemaVersion": 1,
   "title": "The Moonlit Garden",
-  "adventureId": "c4557056-ab49-472a-926f-e46490c50787",
+  "adventureId": "d88070e6-f399-4be0-a053-3b276f801c4b",
   "adventureVersion": 1,
   "mode": "review",
   "profile": "no-bleed",
   "pageCount": 1,
-  "generatedAt": "2026-11-08T15:20:54.674Z",
+  "profilePolicy": "Visual pages use saved settings; profile selection applies to legacy pages",
+  "pageProfiles": [
+    {
+      "page": 1,
+      "widthInches": 8.267716535433072,
+      "heightInches": 11.692913385826772,
+      "trim": {
+        "x": 0,
+        "y": 0,
+        "width": 8.267716535433072,
+        "height": 11.692913385826772
+      },
+      "dpi": 300
+    }
+  ],
+  "generatedAt": "2026-11-08T15:35:35.751Z",
   "files": [
     {
       "path": "interior.pdf",
       "bytes": 18178,
-      "sha256": "31a01609be3788fcbfd15268e7424158b3bbfa6276c1e5eb68a7ace72fb36c1c"
+      "sha256": "1da3bad9bff0d6ce7dc3871726a0555e3a8656aab6a4319e90faf8840769faa3"
     },
     {
       "path": "answers.pdf",
       "bytes": 19050,
-      "sha256": "29b0b80f3f528709ca357b1cee27559724314e8231cd8933ecc74a0cd8caf1be"
+      "sha256": "1447ade54717356ea2062a24dd8ae8f46347965db4ddaf701f1da57193733667"
     },
     {
       "path": "pages/page-001.svg",
       "bytes": 15173,
-      "sha256": "9ec1f95f79315ce16391c4cc1297487c628f6a3970fedd2851d3f2737d4fd66e"
+      "sha256": "78fc8d296343955be5cc0e3836b23505e30cfaefb54a2ec8f3e43698bac749a5"
     },
     {
       "path": "solutions/page-001.svg",
       "bytes": 17410,
-      "sha256": "502aaec18fe3fea6002bdb6afe513adda38e45687e215ececf60cf8af26ae071"
+      "sha256": "acb3ed6b076b14c5472ade0c273c5b235837dbf8cd1a1b742187f414154758f4"
     },
     {
       "path": "pages/page-001.pdf",
       "bytes": 18178,
-      "sha256": "e765c149fc7af85a2710ef0514be82f02a348d076884383d9992cee84d1fe7bc"
+      "sha256": "7aca95a16bc6d4a7c335fb02424d2a4afaafe9d56e84454e6bdabca5d586f9e8"
     },
     {
       "path": "assets/9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0.svg",
@@ -46,7 +61,7 @@
     {
       "path": "provenance.json",
       "bytes": 856,
-      "sha256": "a2c5ad666dc8cc4e2f2d2528013297e5b7680a0e3dda70854495c8cb5c9f5f7f"
+      "sha256": "1caf4854c2ae7e8fbf634d92a332ff7cccd08b3c2007190f5977ea4b6afb5b17"
     },
     {
       "path": "validation-report.json",
@@ -56,7 +71,7 @@
     {
       "path": "adventure.json",
       "bytes": 7574,
-      "sha256": "07559bdf41933fdddb2ae9f7008b3ee581687868e9817c50f28c23dd7ac19334"
+      "sha256": "e67b5a0c57f910fb4f3094ce9f5c0cc41b98ffd871348fd4fe2ffc301e77afc8"
     },
     {
       "path": "pages/page-001.png",
