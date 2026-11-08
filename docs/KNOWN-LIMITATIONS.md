@@ -12,3 +12,5 @@
 - The original five-page sample is below KDP minimum book length. Automatic layout checks and rights records do not constitute publication approval or legal clearance.
 - Paid generation remains disabled. No direct Story Book Builder import has been verified. Existing source-export handoff remains available. No unrelated application or DNS change was made.
 - The host runs Node 24.11.1 while the installed cf CLI declares 24.22+ or 22.23+. Builds/tests/deployment work here; upgrade Node for the CLI-supported baseline.
+
+- Cloudflare returned one transient 1102 resource-limit response during overlapping live export checks. Isolated and bounded three-request retries succeeded; no CPU/memory root cause was established from the short profile. The client retries transient failures once. Avoid overlapping large exports and use a smaller package if the platform continues reporting a resource limit. No paid plan upgrade was initiated.

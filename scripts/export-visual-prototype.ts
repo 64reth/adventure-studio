@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
-import sharp from "sharp";
+import { resolve } from "node:path";
+import { setPngDpi } from "../packages/print/png";
 import { createAdventure } from "../packages/core/index";
 import { makePage } from "../packages/adventure/index";
 import {
@@ -90,9 +91,17 @@ const zip = await exportPackage(adventure, font, {
   profile: "no-bleed",
   fonts,
 });
+await mkdir(".data/font-cache", { recursive: true });
+const configPath = resolve(".data/build-006-fontconfig.xml");
+await writeFile(
+  configPath,
+  `<fontconfig><dir>${resolve("apps/studio/public/fonts")}</dir><cachedir>${resolve(".data/font-cache")}</cachedir></fontconfig>`,
+);
+process.env.FONTCONFIG_FILE = configPath;
+const sharp = (await import("sharp")).default;
 const svg = compose(page),
   png = await sharp(Buffer.from(svg), { density: 300 }).png().toBuffer();
-zip.file("pages/page-001.png", png);
+zip.file("pages/page-001.png", setPngDpi(png, 300));
 await refreshManifest(zip);
 const root = "artifacts/build-006";
 await mkdir(root, { recursive: true });

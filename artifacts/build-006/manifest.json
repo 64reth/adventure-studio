@@ -1,37 +1,37 @@
 {
   "schemaVersion": 1,
   "title": "The Moonlit Garden",
-  "adventureId": "828b7252-4901-4d71-a3f9-f5b22e0ff288",
+  "adventureId": "c4557056-ab49-472a-926f-e46490c50787",
   "adventureVersion": 1,
   "mode": "review",
   "profile": "no-bleed",
   "pageCount": 1,
-  "generatedAt": "2026-11-08T15:08:22.623Z",
+  "generatedAt": "2026-11-08T15:20:54.674Z",
   "files": [
     {
       "path": "interior.pdf",
       "bytes": 18178,
-      "sha256": "5ea606c350ef106758d8b748db47d82bb7782606ca8b58405c2905ca31d300ae"
+      "sha256": "31a01609be3788fcbfd15268e7424158b3bbfa6276c1e5eb68a7ace72fb36c1c"
     },
     {
       "path": "answers.pdf",
       "bytes": 19050,
-      "sha256": "d6ccb5cfb06110b6e3776cfd49e07911fdda91ba5798e4a5eb8860cd321d7ba8"
+      "sha256": "29b0b80f3f528709ca357b1cee27559724314e8231cd8933ecc74a0cd8caf1be"
     },
     {
       "path": "pages/page-001.svg",
       "bytes": 15173,
-      "sha256": "ad52536b4948b065639c1c2c62f7f9ec678eb2659b750b3eafe6e0f144f3f328"
+      "sha256": "9ec1f95f79315ce16391c4cc1297487c628f6a3970fedd2851d3f2737d4fd66e"
     },
     {
       "path": "solutions/page-001.svg",
       "bytes": 17410,
-      "sha256": "e0f483bc48a71084ce7e90732158dafe316b027952b7eac8def3e8aa8b1e5e94"
+      "sha256": "502aaec18fe3fea6002bdb6afe513adda38e45687e215ececf60cf8af26ae071"
     },
     {
       "path": "pages/page-001.pdf",
       "bytes": 18178,
-      "sha256": "b2766c2bfb3689b9a3d68c8ff9d4f7cb877a7fa9e0ac216a75942f700e98bfd0"
+      "sha256": "e765c149fc7af85a2710ef0514be82f02a348d076884383d9992cee84d1fe7bc"
     },
     {
       "path": "assets/9f894259a0396d47774b3864985feb3da3fcd0359ac074c674f667c2029a0ea0.svg",
@@ -46,7 +46,7 @@
     {
       "path": "provenance.json",
       "bytes": 856,
-      "sha256": "94cdfac41b628227cb9d4100ee06951d96d1edc989a3cb36a2a1914dcbcc9d7d"
+      "sha256": "a2c5ad666dc8cc4e2f2d2528013297e5b7680a0e3dda70854495c8cb5c9f5f7f"
     },
     {
       "path": "validation-report.json",
@@ -56,12 +56,12 @@
     {
       "path": "adventure.json",
       "bytes": 7574,
-      "sha256": "2eb66ba58ae7428f09cba33791f4f49879a30e27b61f5bcadf0a225d96726d9a"
+      "sha256": "07559bdf41933fdddb2ae9f7008b3ee581687868e9817c50f28c23dd7ac19334"
     },
     {
       "path": "pages/page-001.png",
-      "bytes": 1657649,
-      "sha256": "cc68402a51be3dd39b665b79643c3710b163f2b6363e6e05697f5a1a24176e8e"
+      "bytes": 1657498,
+      "sha256": "7b9a759f5f9554908ceec97ce9e078636f82cced2e2afb93c26ccfbc878fddf5"
     }
   ],
   "previewFormat": "300 DPI PNG",

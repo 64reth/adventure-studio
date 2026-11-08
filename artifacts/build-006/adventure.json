@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "828b7252-4901-4d71-a3f9-f5b22e0ff288",
+  "id": "c4557056-ab49-472a-926f-e46490c50787",
   "title": "The Moonlit Garden",
   "series": "Explore, Colour & Solve",
   "theme": "Mechanical garden",
@@ -16,7 +16,7 @@
   "chapters": [],
   "pages": [
     {
-      "id": "bcb26803-f622-42f9-a9b3-9a4842a4eab6",
+      "id": "459b1088-8c69-4705-8d05-84da61c3fe50",
       "chapterId": "chapter-1",
       "number": 1,
       "title": "The Moonlit Garden",
@@ -70,7 +70,7 @@
           },
           "components": [
             {
-              "id": "4c06cc35-6458-4e98-92dd-2a3e48bf060a",
+              "id": "52d66398-f737-4b91-9f76-80aff0a02514",
               "kind": "text",
               "name": "title",
               "x": 40,
@@ -89,7 +89,7 @@
               "lineHeight": 1.4
             },
             {
-              "id": "cf9f3985-0e05-4095-a35a-884be749e2fd",
+              "id": "472e46c3-bb9a-4f54-9884-a38fc8342485",
               "kind": "text",
               "name": "story",
               "x": 40,
@@ -108,7 +108,7 @@
               "lineHeight": 1.4
             },
             {
-              "id": "9320d872-8cc5-4fbc-a60d-9ddfda273c47",
+              "id": "83babbf3-df7d-4548-8ef5-3f92aa67b2cc",
               "kind": "text",
               "name": "instructions",
               "x": 40,
@@ -127,7 +127,7 @@
               "lineHeight": 1.4
             },
             {
-              "id": "52dd0f30-e724-4f5f-a67d-e6c0ca59bc4a",
+              "id": "424e7d4b-16c2-4bcf-98d9-66519c5a7bf3",
               "kind": "character",
               "name": "robot",
               "x": 475,
@@ -145,7 +145,7 @@
               "align": "left",
               "lineHeight": 1.4,
               "character": {
-                "characterId": "e21e33bb-6f03-4de9-a74c-e7335dd8cdaa",
+                "characterId": "223c9ea3-6343-488f-9a5e-66ec7bea2af3",
                 "assetRef": "",
                 "poseRef": "standing",
                 "expression": "happy",
@@ -155,7 +155,7 @@
               }
             },
             {
-              "id": "ca2ed0b9-3375-4589-81e8-c6bb30a39d54",
+              "id": "0e0fb561-1c58-4535-ada5-96e4683552fd",
               "kind": "puzzle",
               "name": "maze",
               "x": 44,
@@ -172,10 +172,10 @@
               "fontSize": 13,
               "align": "left",
               "lineHeight": 1.4,
-              "puzzleRef": "bcb26803-f622-42f9-a9b3-9a4842a4eab6"
+              "puzzleRef": "459b1088-8c69-4705-8d05-84da61c3fe50"
             },
             {
-              "id": "fec96581-4b13-43a7-9477-2d92a2eca74f",
+              "id": "a00fdbe1-509d-4f1a-9f8b-9cba6a7bdd82",
               "kind": "scenery",
               "name": "tree",
               "x": 490,
@@ -194,7 +194,7 @@
               "lineHeight": 1.4
             },
             {
-              "id": "765246cd-6be1-446d-95a0-b6a7130a831b",
+              "id": "193aeab4-311e-4b3e-9b12-3aa964d02351",
               "kind": "text",
               "name": "answer",
               "x": 40,
@@ -213,7 +213,7 @@
               "lineHeight": 1.4
             },
             {
-              "id": "3174c36c-be55-4ed2-91d2-03a52289bfc6",
+              "id": "e4b2d5d6-4525-41bd-a08e-60d5b3d87d89",
               "kind": "text",
               "name": "page number",
               "x": 540,
@@ -254,5 +254,5 @@
   "inventory": [],
   "status": "Draft",
   "version": 1,
-  "updatedAt": "2026-11-08T15:08:22.543Z"
+  "updatedAt": "2026-11-08T15:20:54.595Z"
 }

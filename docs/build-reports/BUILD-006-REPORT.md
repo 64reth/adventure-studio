@@ -14,11 +14,17 @@ Implemented a visual, monochrome page-production editor alongside the existing f
 - A shared SVG renderer for canvas/PDF/PNG/source exports; saved visual print settings and fixed-weight embedded print fonts; PNG DPI metadata; source/answer/provenance/manifests and current approval gates.
 
 ## Verification
-37 unit/integration tests, strict type checks, production build and nine local browser workflows passed. The complete visual workflow includes a blank A4 page, dragged maze, scenery/text, resize handle, undo/redo, save, reload, validation, approval and a real mixed-page PDF/PNG package download. Device-local asset reuse and keyboard/draft recovery are tested.
+40 unit/integration tests, strict type checks, production build and nine local browser workflows passed. The complete visual workflow includes a blank A4 page, dragged maze, scenery/text, resize handle, undo/redo, save, reload, validation, approval and a real mixed-page PDF/PNG package download. Device-local asset reuse and keyboard/draft recovery are tested.
 
 Actual A4 player/answer PDFs were rendered, not merely inspected as SVGs. All three fonts embed, dimensions are correct, and all text/drawing bounds fit. See artifacts/build-006/pdf-verification.json. Desktop/tablet screenshots show no browser errors or page overflow.
 
-Live staging, release commit and deployment identifier are recorded after deployment below.
+Live staging: https://adventure-studio-staging.garetha81.workers.dev
+
+Release commit: 3f3b16c — `feat: build visual Page Studio and playful UI` — pushed to origin/main.
+
+Deployment: 24c0de1d-c43c-40e4-bfc0-791d316ca4b4.
+
+All nine live browser workflows passed. Freshly generated live A4 player/answer PDFs embed all three fonts and pass dimension/text/path bounds checks. Deployed desktop/focus/tablet screenshots are captured below. One Cloudflare resource-limit response occurred while export checks overlapped; an isolated retry and three concurrent retries succeeded. The short heap capture had no useful allocation samples, so no CPU/memory root cause is claimed. Avoid overlapping large exports or use smaller packages if it recurs. The client now retries transient network/5xx export failures once after 1.5 seconds and gives a clear capacity message on repeated failure. Approval/validation errors are never retried. No paid resource-limit increase was made.
 
 ## Screenshots
 - ../screenshots/build-006-dashboard.png

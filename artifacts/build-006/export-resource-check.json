@@ -1,0 +1,27 @@
+{
+  "observed": "One Cloudflare 1102 response during overlapping export checks",
+  "isolatedRetry": {
+    "status": 200,
+    "milliseconds": 1123
+  },
+  "threeConcurrentRetries": [
+    {
+      "status": 200,
+      "milliseconds": 1142
+    },
+    {
+      "status": 200,
+      "milliseconds": 547
+    },
+    {
+      "status": 200,
+      "milliseconds": 662
+    }
+  ],
+  "heapProfile": {
+    "bytes": 97,
+    "allocationSamples": 0,
+    "finding": "No useful sampled allocations; CPU versus memory cause not established"
+  },
+  "mitigation": "Avoid overlapping large exports; retry or use smaller page packages if the platform returns a resource limit. No account limits or paid plans changed."
+}

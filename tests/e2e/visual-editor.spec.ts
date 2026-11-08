@@ -84,7 +84,9 @@ test("blank page: size, drag activity, scenery, text, transforms, undo, reload, 
     page.getByRole("status").filter({ hasText: "review recorded" }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Publishing", exact: true }).click();
-  const exported = page.waitForResponse((r) => r.url().endsWith("/api/export"));
+  const exported = page.waitForResponse(
+    (r) => r.url().endsWith("/api/export") && r.status() < 500,
+  );
   const download = page.waitForEvent("download");
   await page.getByRole("button", { name: "Export review package" }).click();
   expect((await exported).status()).toBe(200);

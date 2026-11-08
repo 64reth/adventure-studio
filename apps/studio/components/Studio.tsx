@@ -34,6 +34,7 @@ import {
 } from "../../../packages/puzzles/index";
 import { LocalArtworkProvider } from "../../../packages/artwork/index";
 import { compose } from "../../../packages/composer/index";
+import { requestExport } from "../../../packages/print/request";
 import { setPngDpi } from "../../../packages/print/png";
 import { refreshManifest } from "../../../packages/print/manifest";
 import { layout, type PrintProfile } from "../../../packages/print/index";
@@ -227,10 +228,8 @@ export default function Studio() {
     if (!current) return;
     setBusy(true);
     try {
-      const response = await fetch("/api/export", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+      const response = await requestExport(
+        {
           adventure: {
             ...current,
             pages: current.pages.map((p) =>
@@ -241,12 +240,12 @@ export default function Studio() {
           },
           mode,
           profile,
-        }),
-      });
-      if (!response.ok) {
-        const body = (await response.json()) as { error: string };
-        throw new Error(body.error);
-      }
+        },
+        {
+          onRetry: () =>
+            setNotice("Export service is temporarily busy. Retrying once…"),
+        },
+      );
       const JSZip = (await import("jszip")).default,
         zip = await JSZip.loadAsync(await response.arrayBuffer());
       await document.fonts.ready;
@@ -263,7 +262,7 @@ export default function Studio() {
             String.fromCharCode(n),
           ).join(""),
         );
-        fontCSS += `@font-face{font-family:'${family}';src:url(data:font/ttf;base64,${base64}) format('truetype');}`;
+        fontCSS += `@font-face{font-family:'${family}';font-weight:${family === "Open Sans" ? 400 : 500};src:url(data:font/ttf;base64,${base64}) format('truetype');}`;
       }
       for (const p of current.pages) {
         const svg = compose(p, {
