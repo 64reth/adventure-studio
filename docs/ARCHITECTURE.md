@@ -1,2 +1,6 @@
 # Architecture
 TypeScript workspace: apps/studio uses React and the Next.js App Router API through vinext, deployed as a dedicated Cloudflare Worker. packages/core defines Zod boundaries; packages/storage supplies browser and atomic local-file adapters. Browser records are local to the device and origin. Print coordinates use inches, converted to PDF points at export. Puzzle packages must remain independent of React and artwork services.
+
+Server `/api/export` validates a bounded 2 MB input, regenerates authoritative puzzles, checks progression/rewards/approvals and returns a PDF/SVG handoff ZIP. All projects remain in browser local storage; the server does not retain user manuscripts. Client export adds 300 DPI canvas PNGs and finalizes manifest hashes. CLI export uses sharp and produces review packages under artifacts/enchanted-kingdom.
+
+Production jobs use versioned Zod records in browser storage, deterministic page inputs, zero-cost SVG assets, output hashes, attempts and logs. Startup recovers interrupted running jobs as pending. Processing checks current page revision and approval before applying output. Missing/changed pages fail explicitly. Chapter/page metadata is separate from theme-independent puzzle mechanics.

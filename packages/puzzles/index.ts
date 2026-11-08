@@ -42,6 +42,7 @@ function generate(kind:Mechanic,raw:Config,seed:string):Puzzle{
  if(failed)continue;grid.forEach(row=>row.forEach((char,i)=>{if(!char)row[i]=alphabet[Math.floor(rng()*26)];}));const p:WordSearch={kind,size,grid,words,directions,reward:'OAK'};const found=scanWords(p);if(words.every(w=>found[w].length===1))return p;
  }throw new Error('Could not construct an unambiguous word search; try another seed');
  }
+ if(c.message&& (c.message.trim().split(/\s+/).length>3||c.message.split(' ').some(w=>w.length>12)))throw new Error('Print cipher supports up to three words of at most 12 letters');
  const key=Object.fromEntries([...alphabet].map((letter,i)=>[letter,shuffle([...alphabet],random(seed+'-key')).indexOf(letter).toString().padStart(2,'0')]));
  return {kind:'cipher',key,encoded:(c.message??'FOLLOW THE RIVER').split(' ').map(w=>[...w].map(char=>key[char]))};
 }
